@@ -10,7 +10,6 @@ body {
 
 .app {
   float: left;
-  color: #FFF;
 }
 
 #apps-foreground {
@@ -19,4 +18,36 @@ body {
   height: 100%;
   //background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   background-color: rgba(0,0,0,0.8);
+}
+
+.app.foreground {
+  position: relative;
+  color: #FFF;
+  background-color: rgba(0,0,0,0.8);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 25%;
+}
+
+.app.foreground img {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -50px;
+}
+
+.app.foreground span {
+  display: block;
+  margin-left: 120px;
+  margin-bottom: 5px;
+}
+
+.app.foreground .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.app.foreground .category {
+  font-style: italic;
 }

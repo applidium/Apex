@@ -15,16 +15,15 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="mustache.js"></script>
     <script id="foreground-app" type="text/x-mustache-template">
-      <div class="app">
-        <span class="rank">{{rank}}</span>
+      <div class="app foreground">
         <img src="{{icon}}"/>
-        <span class="name">{{name}}</span>
+        <span class="rank name">#{{rank}} - {{name}}</span>
         <span class="category">{{category}}</span>
         <span class="editor">{{editor}}</span>
       </div>
     </script>
     <script id="background-app" type="text/x-mustache-template">
-      <img class="app" src="{{icon}}"/>
+      <img class="app background" src="{{icon}}"/>
     </script>
     <script src="top_app_store.js"></script>
     <script type='text/javascript'>

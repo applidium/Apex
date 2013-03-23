@@ -4,7 +4,7 @@ $(function(){
     context: document.body
   }).done(function(data) {
     $.each($(data).find('entry'), function(index, value) {
-      addApplication(index+1, index <= 10 ? 'foreground' : 'background', value);
+      addApplication(index+1, index < 10 ? 'foreground' : 'background', value);
     });
   });
 });
