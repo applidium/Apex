@@ -21,19 +21,51 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+@-webkit-keyframes slideshow {
+    0% {
+      left: -250px;
+    }
+    10% {
+      left: -750px;
+    }
+    20% {
+      left: -1250px;
+    }
+    30% {
+      left: -1750px;
+    }
+    40% {
+      left: -2250px;
+    }
+    50% {
+      left: -2750px;
+    }
+    60% {
+      left: -3250px;
+    }
+    70% {
+      left: -3750px;
+    }
+    80% {
+      left: -4250px;
+    }
+    90% {
+      left: -4750px;
+    }
+    100% {
+      left: -5250px;
+    }
+}
+
 #apps-foreground {
   position: absolute;
   width: 9999px;
   height: 100%;
   left: 0;
-  //background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-  -webkit-transition-property: left;
-  -webkit-transition-duration: .5s; /* on aurait pu écrire 500ms également */
-  -webkit-transition-timing-function: ease-in;
-}
-
-#apps-foreground:hover {
-  left: -800px;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: 50%;
+  -webkit-animation: slideshow 30s ease-in-out infinite alternate;
 }
 
 .app.foreground {
@@ -41,8 +73,9 @@ body {
   color: #FFF;
   background-color: rgba(0,0,0,0.8);
   padding: 20px;
-  margin: 20px;
+  margin: 30px;
   border-radius: 20px;
+  min-height: 100px;
   width: 400px;
 }
 
