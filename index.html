@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' />
     <title>Top App Store</title>
-    <link href='/static/stylesheets/shared.css?13638893' media='screen' rel='stylesheet' type='text/css' />
+    <link href='style.css' media='screen' rel='stylesheet' type='text/css' />
     <style type='text/css'>
       /*<![CDATA[*/
         #content {
@@ -14,13 +14,16 @@
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="mustache.js"></script>
-    <script id="entry-template" type="text/x-mustache-template">
+    <script id="foreground-app" type="text/x-mustache-template">
       <div class="app">
-        <h1>{{name}}</h1>
-        <h2>{{category}}</h2>
         <img src="{{icon}}"/>
-        <p>{{editor}}</p>
+        <!-- <span class="name">{{name}}</span>
+        <span class="category">{{category}}</span>
+        <span class="editor">{{editor}}</span> -->
       </div>
+    </script>
+    <script id="background-app" type="text/x-mustache-template">
+      <img class="app" src="{{icon}}"/>
     </script>
     <script src="top_app_store.js"></script>
     <script type='text/javascript'>
@@ -37,7 +40,9 @@
     </script>
   </head>
   <body>
-    <div id="apps">
+    <div id="apps-foreground">
+    </div>
+    <div id="apps-background">
     </div>
   </body>
 </html>
