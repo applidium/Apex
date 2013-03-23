@@ -15,11 +15,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="mustache.js"></script>
     <script id="entry-template" type="text/x-mustache-template">
-      <div>
+      <div class="app">
         <h1>{{name}}</h1>
         <h2>{{category}}</h2>
         <img src="{{icon}}"/>
-        <p>template content</p>
+        <p>{{editor}}</p>
       </div>
     </script>
     <script src="top_app_store.js"></script>
@@ -37,7 +37,7 @@
     </script>
   </head>
   <body>
-    <div id="insertion">
+    <div id="apps">
     </div>
   </body>
 </html>
