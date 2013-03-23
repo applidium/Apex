@@ -16,10 +16,11 @@
     <script src="mustache.js"></script>
     <script id="foreground-app" type="text/x-mustache-template">
       <div class="app">
+        <span class="rank">{{rank}}</span>
         <img src="{{icon}}"/>
-        <!-- <span class="name">{{name}}</span>
+        <span class="name">{{name}}</span>
         <span class="category">{{category}}</span>
-        <span class="editor">{{editor}}</span> -->
+        <span class="editor">{{editor}}</span>
       </div>
     </script>
     <script id="background-app" type="text/x-mustache-template">
@@ -40,9 +41,7 @@
     </script>
   </head>
   <body>
-    <div id="apps-foreground">
-    </div>
-    <div id="apps-background">
-    </div>
+    <div id="apps-background"></div>
+    <div id="apps-foreground"></div>
   </body>
 </html>
