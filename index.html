@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='utf-8' />
+    <title>Top App Store</title>
+    <link href='/static/stylesheets/shared.css?13638893' media='screen' rel='stylesheet' type='text/css' />
+    <style type='text/css'>
+      /*<![CDATA[*/
+        #content {
+          position: relative;
+          top: -20px;
+        }
+      /*]]>*/
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="mustache.js"></script>
+    <script id="entry-template" type="text/x-mustache-template">
+      <div>
+        <h1>{{name}}</h1>
+        <h2>{{category}}</h2>
+        <img src="{{icon}}"/>
+        <p>template content</p>
+      </div>
+    </script>
+    <script src="top_app_store.js"></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'FIXME']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div id="insertion">
+    </div>
+  </body>
+</html>
