@@ -34,6 +34,19 @@ body {
     100% { left: -4750px; }
 }
 
+@-moz-keyframes slideshow {
+    0%   { left: -250px; }
+    11%  { left: -750px; }
+    22%  { left: -1250px; }
+    33%  { left: -1750px; }
+    44%  { left: -2250px; }
+    55%  { left: -2750px; }
+    66%  { left: -3250px; }
+    77%  { left: -3750px; }
+    88%  { left: -4250px; }
+    100% { left: -4750px; }
+}
+
 #apps-foreground {
   position: absolute;
   width: 9999px;
@@ -43,6 +56,7 @@ body {
   margin-top: -100px;
   margin-left: 50%;
   -webkit-animation: slideshow 60s ease-in-out infinite alternate;
+  -moz-animation: slideshow 60s ease-in-out infinite alternate;
 }
 
 .app.foreground {
