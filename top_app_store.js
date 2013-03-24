@@ -22,13 +22,15 @@ function reloadRSSFeed(verbose) {
 }
 
 function addApplication(index, kind, xmlNode) {
+  // Note: Apparently jQuery has trouble consistently parsing namespaced XML.
+  //   So we're joining two methods, one that works in WebKit and another that works in Firefox
   var metadata = {
     "rank": index,
-    "name": $(xmlNode).find('name').text(),
+    "name": $(xmlNode).find('im\\:name, name').text(),
     "category": $(xmlNode).find('category').attr('label'),
-    "icon_medium": $(xmlNode).find('image').last().text(),
-    "icon_large": $(xmlNode).find('image').last().text().replace('100x100', '512x512'), // Hack: let's retrieve a higher resolution image that's not in the XML feed
-    "editor": $(xmlNode).find('artist').text()
+    "icon_medium": $(xmlNode).find('im\\:image, image').last().text(),
+    "icon_large": $(xmlNode).find('im\\:image, image').last().text().replace('100x100', '512x512'), // Hack: let's retrieve a higher resolution image that's not in the XML feed
+    "editor": $(xmlNode).find('im\\:artist, artist').text()
   };
   $('#apps-' + kind).append(Mustache.render($('#' + kind + '-app').html(), metadata));
 }
