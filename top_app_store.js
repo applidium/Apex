@@ -22,7 +22,8 @@ function addApplication(index, kind, xmlNode) {
     "rank": index,
     "name": $(xmlNode).find('name').text(),
     "category": $(xmlNode).find('category').attr('label'),
-    "icon": $(xmlNode).find('image').last().text(),
+    "icon_medium": $(xmlNode).find('image').last().text(),
+    "icon_large": $(xmlNode).find('image').last().text().replace('100x100', '512x512'), // Hack: let's retrieve a higher resolution image that's not in the XML feed
     "editor": $(xmlNode).find('artist').text()
   };
   $('#apps-' + kind).append(Mustache.render($('#' + kind + '-app').html(), metadata));
