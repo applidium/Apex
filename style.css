@@ -22,39 +22,16 @@ body {
 }
 
 @-webkit-keyframes slideshow {
-    0% {
-      left: -250px;
-    }
-    10% {
-      left: -750px;
-    }
-    20% {
-      left: -1250px;
-    }
-    30% {
-      left: -1750px;
-    }
-    40% {
-      left: -2250px;
-    }
-    50% {
-      left: -2750px;
-    }
-    60% {
-      left: -3250px;
-    }
-    70% {
-      left: -3750px;
-    }
-    80% {
-      left: -4250px;
-    }
-    90% {
-      left: -4750px;
-    }
-    100% {
-      left: -5250px;
-    }
+    0%   { left: -250px; }
+    11%  { left: -750px; }
+    22%  { left: -1250px; }
+    33%  { left: -1750px; }
+    44%  { left: -2250px; }
+    55%  { left: -2750px; }
+    66%  { left: -3250px; }
+    77%  { left: -3750px; }
+    88%  { left: -4250px; }
+    100% { left: -4750px; }
 }
 
 #apps-foreground {
