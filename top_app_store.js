@@ -1,15 +1,19 @@
 $(function(){
-  reloadRSSFeed();
+  reloadRSSFeed(true);
   setInterval(function(){
-    reloadRSSFeed();
+    reloadRSSFeed(false);
   }, 15*60*1000); // Refresh every 15 minutes
 });
 
-function reloadRSSFeed() {
+function reloadRSSFeed(verbose) {
+  if (verbose) {
+    $('body').append("<div class='spinner'><p class='symbol'>✛</p><p class='legend'>Loading…</p></div>");
+  }
   $.ajax({
     url: "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=250/xml",
-    context: document.body
+  context: document.body
   }).done(function(data) {
+    $('.spinner').remove();
     $('.app').remove();
     $.each($(data).find('entry'), function(index, value) {
       addApplication(index+1, index < 10 ? 'foreground' : 'background', value);
