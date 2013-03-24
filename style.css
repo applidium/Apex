@@ -6,6 +6,7 @@
 body {
   background-color: #000;
   overflow: hidden;
+  font-size: 28px;
 }
 
 .app {
@@ -53,7 +54,7 @@ body {
   height: 100%;
   left: 0;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -178px;
   margin-left: 50%;
   -webkit-animation: slideshow 60s ease-in-out infinite alternate;
   -moz-animation: slideshow 60s ease-in-out infinite alternate;
@@ -65,26 +66,29 @@ body {
   background-color: rgba(0,0,0,0.8);
   padding: 20px;
   margin: 30px;
-  border-radius: 20px;
-  min-height: 100px;
-  width: 400px;
+  min-height: 256px;
+  border-radius: 50px;
+  width: 532px;
 }
 
 .app.foreground img {
   position: absolute;
   top: 50%;
   left: 20px;
-  margin-top: -50px;
+  width: 256px;
+  height: 256px;
+  margin-top: -128px;
+  border-radius: 40px;
 }
 
 .app.foreground span {
   display: block;
-  margin-left: 120px;
-  margin-bottom: 5px;
+  margin-left: 276px;
+  margin-bottom: 15px;
 }
 
 .app.foreground .name {
-  font-size: 20px;
+  font-size: 34px;
   font-weight: bold;
 }
 
