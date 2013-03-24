@@ -7,6 +7,8 @@ body {
   background-color: #000;
   overflow: hidden;
   font-size: 28px;
+  color: #FFF;
+  font-family: Helvetica, sans-serif;
 }
 
 .app {
@@ -62,7 +64,6 @@ body {
 
 .app.foreground {
   position: relative;
-  color: #FFF;
   background-color: rgba(0,0,0,0.8);
   padding: 20px;
   margin: 30px;
