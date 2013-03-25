@@ -2,13 +2,12 @@
 <html lang='fr'>
   <head>
     <meta charset='utf-8' />
-    <title>Top App Store</title>
+    <title>App Store Apex</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href='style.css' media='screen' rel='stylesheet' type='text/css' />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="jquery.min.js">\x3C/script>')</script>
-    <script src="mustache.js"></script>
     <script id="foreground-app" type="text/x-mustache-template">
       <div class="app foreground">
         <img src="{{icon_large}}"/>
@@ -20,19 +19,8 @@
     <script id="background-app" type="text/x-mustache-template">
       <img class="app background" src="{{icon_medium}}"/>
     </script>
+    <script src="mustache.js"></script>
     <script src="top_app_store.js"></script>
-    <script type='text/javascript'>
-      //<![CDATA[
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'FIXME']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-      //]]>
-    </script>
   </head>
   <body>
     <div id="apps-background"></div>
