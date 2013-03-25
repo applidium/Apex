@@ -11,10 +11,6 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.app {
-  float: left;
-}
-
 #apps-background:after {
   content: " ";
   position: absolute;
@@ -96,6 +92,7 @@ body {
 
 .app.foreground {
   position: relative;
+  float: left;
   background-color: rgba(0,0,0,0.8);
   padding: 20px;
   margin: 30px;
@@ -127,4 +124,11 @@ body {
 
 .app.foreground .category {
   font-style: italic;
+}
+
+.app.background {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 100px;
 }
