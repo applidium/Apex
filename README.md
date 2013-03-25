@@ -13,11 +13,11 @@ Apex retrieves the global app ranking from Apple and creates a nice HTML layout 
 ## Advanced usage
 
 You can change the actual RSS feed being used. Just head to [Apple's RSS generator](http://itunes.apple.com/rss), and pick whichever suits you. Then pass it in the URL, like this :
-`http://apex.applidium.com/?feed=https%3A%2F%2Fitunes.apple.com%2Ffr%2Frss%2Ftopfreeapplications%2Flimit%3D300%2Fxml`
+`http://apex.applidium.com/?feed=https://itunes.apple.com/fr/rss/topfreeapplications/limit%3D300/xml`
 
 Keep two things in mind when customizing your Apex:
 
-* First, you should URL-escape your feed's URL!
+* First, you should URL-escape equal signs in your feed's URL!
 * Second, if you only include the top 10 apps in the feed, the background will be black.
 
 ## I'm a geek, tell me more!
