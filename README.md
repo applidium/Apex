@@ -20,7 +20,7 @@ Keep two things in mind when customizing your Apex:
 * First, you should URL-escape equal signs in your feed's URL!
 * Second, if you only include the top 10 apps in the feed, the background will be black.
 
-## I'm a geek, tell me more!
+## I'm a developer, tell me what's cool about this!
 
 * App Store Apex was made possibly because Apple implemented a [cross-origin ressource sharing policy](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) in their RSS feed. Otherwise it wouldn't have been possible to make a cross-domain AJAX request.
 
