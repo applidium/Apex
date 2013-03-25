@@ -1,17 +1,21 @@
 $(function(){
-  reloadRSSFeed(true);
+  var params = {};
+  $.each(window.location.search.replace('?','').split('&'), function(index, value) {
+    pair = value.split('='); params[pair[0]] = pair[1];
+  });
+  var feed_url = params['feed'] || "https://itunes.apple.com/us/rss/topfreeapplications/limit=300/xml";
+  reloadRSSFeed(feed_url, true);
   setInterval(function(){
-    reloadRSSFeed(false);
+    reloadRSSFeed(feed_url, false);
   }, 15*60*1000); // Refresh every 15 minutes
 });
 
-function reloadRSSFeed(verbose) {
+function reloadRSSFeed(feed, verbose) {
   if (verbose) {
     $('body').append("<div class='spinner'><p class='symbol'>✛</p><p class='legend'>Loading…</p></div>");
   }
   $.ajax({
-    url: "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=250/xml",
-  context: document.body
+    url: feed
   }).done(function(data) {
     $('.spinner').remove();
     $('.app').remove();
